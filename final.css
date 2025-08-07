@@ -1,0 +1,936 @@
+/* Base Styles */
+:root {
+    --primary-color: #d82a2a;
+    --secondary-color: #1a1a1a;
+    --accent-color: #f8c300;
+    --text-color: #333;
+    --light-text: #fff;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f8f8;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* Header */
+  header.sticky-top {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h4 {
+    font-size: 1.5rem;
+    color: var(--light-text);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  .canvaa{
+    width: 100%;
+  }
+  /* Hero Banner */
+  .hero-banner {
+    height: 700px;
+    background-color: red;
+    margin-top: -1px; /* Remove gap between header and banner */
+  }
+  
+  .hero-banner img {
+    max-height: 80vh;
+    /* width: 100%; */
+    /* object-fit: cover; */
+  }
+  
+  /* Bitter Truth Section */
+  .bitter-truth {
+    background-color: var(--light-bg);
+  }
+  
+  .truth-badge {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .truth-badge:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--primary-color);
+  }
+  
+  .truth-quote {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+  
+  .truth-desc {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  
+  /* Price Section */
+  .price-section {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+  }
+  
+  .retail-price {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    opacity: 0.8;
+  }
+  
+  .offer-price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Product Info */
+  .product-name {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  .product-desc {
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+  
+  /* Problem Section */
+  .problem-section {
+    background-color: #f0f0f0;
+  }
+  
+  .problem-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .good-news {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .solution-box {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Benefits Section */
+  .benefits-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .benefit-card {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    color: var(--light-text);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-card h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .benefit-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .benefit-card.safe {
+    background-color: #4CAF50;
+  }
+  
+  .benefit-card.effective {
+    background-color: #2196F3;
+  }
+  
+  .benefit-card.no-side-effects {
+    background-color: #FF9800;
+  }
+  
+  /* Masculinity Section */
+  .masculinity-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  
+  .masculinity-card {
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .masculinity-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .masculinity-card img {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .masculinity-card p {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  /* Power Formula Section */
+  .formula-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+  
+  .formula-subtitle {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+  
+  .formula-highlight {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin: 1rem 0;
+  }
+  
+  .formula-desc {
+    text-align: justify;
+    font-size: 1.1rem;
+  }
+  
+  /* Issues Section */
+  .issues-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .issue-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: #f8f8f8;
+    border-radius: var(--border-radius);
+  }
+  
+  .issue-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  .issue-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .issue-item p {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
+  
+  .issue-note {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Ingredients Section */
+  .ingredients-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ingredients-title .highlight {
+    color: var(--primary-color);
+  }
+  
+  .ingredient-card {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .ingredient-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1rem;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .ingredient-info h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ingredient-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  
+  /* Growth Graph Section */
+  .graph-title-box {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  
+  .graph-title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .graph-note {
+    text-align: justify;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .best-selling {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .best-selling span {
+    color: var(--primary-color);
+  }
+  
+  .our-goal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .our-goal img {
+    width: 40px;
+    margin-right: 1rem;
+  }
+  
+  .our-goal span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .goal-desc {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .goal-desc span {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* Amazing Benefits Section */
+  .benefits-heading {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .benefit-item {
+    text-align: center;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-item img {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .benefit-item p {
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  /* Ultimate Pleasure Section */
+  .pleasure-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .pleasure-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .pleasure-card {
+    background-color: #f8f8f8;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .pleasure-card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+  }
+  
+  .pleasure-card p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  .pleasure-card p span {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* Girls Section */
+  .girls-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .girls-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .product-statement {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .product-statement span {
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+  /* Order Form Section */
+  .order-form {
+    background-color: #f0f0f0;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .form-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+  
+  .price-container {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+  }
+  
+  .order-form-container {
+    background-color: var(--light-text);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .limited-offer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    transform: rotate(45deg) translate(30%, -50%);
+    transform-origin: center;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .countdown-container {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+  }
+  
+  .clock {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .clock > div {
+    text-align: center;
+  }
+  
+  .clock .days, .clock .hours, .clock .minutes, .clock .seconds {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+  
+  .clock span {
+    font-size: 0.8rem;
+    display: block;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .submit-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #b71c1c;
+  }
+  
+  .form-response {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: none;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+  }
+  
+  .copyright, .policy {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .policy {
+    color: #aaa;
+  }
+  
+  /* Fixed Order Bar */
+  .fixed-order-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.8rem 0;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .discount-text {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  
+  .discount-text .time {
+    font-weight: bold;
+    color: var(--accent-color);
+  }
+  
+  .discount-btn {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .discount-btn:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+  
+  /* Fixed Bottom Order Button */
+  .fixed-bottom-order-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  .fixed-bottom-order-btn:hover {
+    transform: scale(1.1);
+    color: var(--light-text);
+  }
+  
+  /* Order Button */
+  .order-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: var(--box-shadow);
+    margin: 1rem 0;
+  }
+  
+  .order-btn:hover {
+    transform: translateY(-3px);
+    background-color: #b71c1c;
+    color: var(--light-text);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1199.98px) {
+    html {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+    html {
+      font-size: 14px;
+    }
+    
+    .hero-banner img {
+      max-height: 60vh;
+    }
+    
+    .formula-title {
+      font-size: 2.5rem;
+    }
+    
+    .formula-subtitle {
+      font-size: 1.8rem;
+    }
+    
+    .formula-highlight {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    html {
+      font-size: 13px;
+    }
+    
+    header h4 {
+      font-size: 1.2rem;
+    }
+    
+    .hero-banner img {
+      max-height: 50vh;
+    }
+    
+    .truth-quote {
+      font-size: 1.1rem;
+    }
+    
+    .truth-desc, .product-desc {
+      font-size: 1rem;
+    }
+    
+    .retail-price {
+      font-size: 1.2rem;
+    }
+    
+    .offer-price {
+      font-size: 1.5rem;
+    }
+    
+    .problem-title {
+      font-size: 1.5rem;
+    }
+    
+    .good-news {
+      font-size: 2rem;
+    }
+    
+    .benefits-title, .masculinity-title {
+      font-size: 1.3rem;
+    }
+    
+    .formula-title {
+      font-size: 2rem;
+    }
+    
+    .formula-subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .formula-highlight {
+      font-size: 1.8rem;
+    }
+    
+    .issues-title {
+      font-size: 1.5rem;
+    }
+    
+    .ingredients-title {
+      font-size: 1.8rem;
+    }
+    
+    .benefits-heading {
+      font-size: 1.8rem;
+    }
+    
+    .pleasure-title {
+      font-size: 2rem;
+    }
+    
+    .pleasure-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .girls-title {
+      font-size: 1.8rem;
+    }
+    
+    .girls-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .form-title {
+      font-size: 1.8rem;
+    }
+    
+    .form-subtitle {
+      font-size: 1.3rem;
+    }
+    
+    .fixed-bottom-order-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    html {
+      font-size: 12px;
+    }
+    
+    .hero-banner img {
+      max-height: 40vh;
+    }
+    
+    .truth-badge {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+    }
+    
+    .benefit-card h1 {
+      font-size: 2.5rem;
+    }
+    
+    .benefit-card p {
+      font-size: 1rem;
+    }
+    
+    .clock {
+      gap: 0.5rem;
+    }
+    
+    .clock .days, .clock .hours, .clock .minutes, .clock .seconds {
+      font-size: 1.2rem;
+    }
+    
+    .clock span {
+      font-size: 0.7rem;
+    }
+    
+    .fixed-order-bar {
+      padding: 0.5rem;
+    }
+    
+    .discount-text {
+      font-size: 0.9rem;
+    }
+    
+    .discount-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .fixed-bottom-order-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 0.7rem;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+  
+  /* Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
