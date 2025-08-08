@@ -678,10 +678,9 @@
           method: 'POST', 
           body: formData 
         })
-        
+        .then(response => {
             .then(response => {
-    window.location.href = "https://www.duadawai.com/"; // यहाँ अपना लिंक डालो
-
+   
     // Show success message
     document.getElementById('formResponse').style.display = 'block';
     document.getElementById('formResponse').innerHTML = `
@@ -725,6 +724,7 @@
 </body>
 
 </html>
+
 
 
 
