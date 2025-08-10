@@ -12,15 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWKWQ0Q5CN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XWKWQ0Q5CN');
-</script>
 </head>
 <body>
     <!-- Header Section -->
@@ -37,7 +28,7 @@
     <!-- Hero Banner -->
     
        
-            <img src="canva.webp" alt="Jazbati DD 69" class="canvaa" ">
+            <img src="canva.png" alt="Jazbati DD 69" class="canvaa" ">
         
     
 
@@ -678,9 +669,14 @@
           method: 'POST', 
           body: formData 
         })
-        
-            .then(response => {
-    window.location.href = "https://www.duadawai.com/";
+        .then(response => {
+          // Show success message
+          document.getElementById('formResponse').style.display = 'block';
+          document.getElementById('formResponse').innerHTML = `
+            <div style="background-color: #4CAF50; color: white; padding: 15px; border-radius: 5px;">
+              Order placed successfully! We will contact you shortly.
+            </div>
+          `;
           
           // Reset form
           document.getElementById('contactForm').reset();
@@ -712,11 +708,4 @@
       });
       </script>
 </body>
-
 </html>
-
-
-
-
-
-
